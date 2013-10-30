@@ -1,0 +1,20 @@
+{
+	"manifest_version": 2,
+	"name": "Click To Animate",
+	"version": "1",
+	"description":"Replace animated GIFs with a canvas representation, doubleclick-to-play original",
+	"content_scripts": [
+		{
+			"matches": ["http://*/*"],
+			"js": ["gifcanvas.js"],
+			"run_at": "document_start"
+		}
+	],
+	"permissions": [
+		"http://*/"
+	],
+	"browser_action": {
+		"default_icon": "icon.png",
+		"default_title": "No animated GIFs"    
+	}
+}
